@@ -105,13 +105,10 @@ FUENTES = [
     # Feeds directos de medios (si alguno deja de funcionar, se omite solo)
     ("La Tercera · Política", "https://www.latercera.com/arc/outboundfeeds/rss/category/politica/?outputType=xml", True),
     ("La Tercera · Nacional", "https://www.latercera.com/arc/outboundfeeds/rss/category/nacional/?outputType=xml", False),
-    ("El Mostrador", "https://www.elmostrador.cl/feed/", False),
     ("Ex-Ante", "https://www.ex-ante.cl/feed/", False),
     ("CIPER", "https://www.ciperchile.cl/feed/", False),
     ("El Líbero", "https://ellibero.cl/feed/", False),
-    ("El Dínamo", "https://www.eldinamo.cl/feed/", False),
     ("The Clinic", "https://www.theclinic.cl/feed/", False),
-    ("El Desconcierto", "https://www.eldesconcierto.cl/feed/", False),
     ("Diario Constitucional", "https://www.diarioconstitucional.cl/feed/", False),
 ]
 
@@ -288,6 +285,8 @@ def revisar(enviar=True):
             candidatas.extend(extraer(nombre, url, siempre))
         except Exception as e:  # una fuente caída no detiene el resto
             errores.append(f"{nombre}: {e}")
+        if "news.google.com" in url:
+            time.sleep(4)  # pausa para que Google News no bloquee por exceso de consultas
 
     candidatas.sort(key=lambda n: n["fecha"] or ahora)
     titulos_previos = [(set(t[0].split()), t[1]) for t in estado["titulos"]]
