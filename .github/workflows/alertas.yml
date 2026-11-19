@@ -2,7 +2,7 @@ name: Alertas políticas
 
 on:
   schedule:
-    - cron: "*/5 * * * *"      # cada 5 minutos (GitHub puede atrasarse algunos minutos)
+    - cron: "17 */6 * * *"      # respaldo: reinicia el ciclo si alguna vez se detiene
   workflow_dispatch:            # botón "Run workflow" para ejecutarlo a mano
     inputs:
       modo:
@@ -11,6 +11,7 @@ on:
 
 permissions:
   contents: write               # para guardar estado_alertas.json (noticias ya enviadas)
+  actions: write                # para relanzarse solo al terminar cada ciclo
 
 concurrency:
   group: alertas
@@ -19,7 +20,7 @@ concurrency:
 jobs:
   revisar:
     runs-on: ubuntu-latest
-    timeout-minutes: 8
+    timeout-minutes: 355
     steps:
       - uses: actions/checkout@v4
 
@@ -35,16 +36,25 @@ jobs:
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
         run: |
           MODO="${{ github.event.inputs.modo || 'revisar' }}"
-          if [ "$MODO" = "probar" ]; then python alertas_politicas.py --probar
-          elif [ "$MODO" = "chat-id" ]; then python alertas_politicas.py --chat-id
-          else python alertas_politicas.py
-          fi
+          if [ "$MODO" = "probar" ]; then python alertas_politicas.py --probar; exit 0; fi
+          if [ "$MODO" = "chat-id" ]; then python alertas_politicas.py --chat-id; exit 0; fi
 
-      - name: Guardar estado
-        run: |
           git config user.name "alertas-bot"
           git config user.email "alertas-bot@users.noreply.github.com"
-          git add estado_alertas.json 2>/dev/null || exit 0
-          git diff --cached --quiet && exit 0
-          git commit -m "estado" -q
-          for i in 1 2 3; do git pull --rebase -q && git push -q && break; sleep 3; done
+          FIN=$(( $(date +%s) + 5*3600 + 40*60 ))   # ciclo de 5 h 40 min
+          while [ "$(date +%s)" -lt "$FIN" ]; do
+            python alertas_politicas.py || echo "Error en la revisión; se reintenta en 3 minutos"
+            git add estado_alertas.json 2>/dev/null || true
+            if ! git diff --cached --quiet; then
+              git commit -m "estado" -q
+              git pull --rebase -q || true
+              git push -q || true
+            fi
+            sleep 180
+          done
+
+      - name: Relanzar el ciclo
+        if: ${{ always() && (github.event.inputs.modo || 'revisar') == 'revisar' }}
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh workflow run alertas.yml --ref main -f modo=revisar
