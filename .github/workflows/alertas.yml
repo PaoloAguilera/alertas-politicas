@@ -1,0 +1,50 @@
+name: Alertas políticas
+
+on:
+  schedule:
+    - cron: "*/5 * * * *"      # cada 5 minutos (GitHub puede atrasarse algunos minutos)
+  workflow_dispatch:            # botón "Run workflow" para ejecutarlo a mano
+    inputs:
+      modo:
+        description: "revisar | probar | chat-id"
+        default: "revisar"
+
+permissions:
+  contents: write               # para guardar estado_alertas.json (noticias ya enviadas)
+
+concurrency:
+  group: alertas
+  cancel-in-progress: false
+
+jobs:
+  revisar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - run: pip install feedparser requests
+
+      - name: Ejecutar
+        env:
+          TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: |
+          MODO="${{ github.event.inputs.modo || 'revisar' }}"
+          if [ "$MODO" = "probar" ]; then python alertas_politicas.py --probar
+          elif [ "$MODO" = "chat-id" ]; then python alertas_politicas.py --chat-id
+          else python alertas_politicas.py
+          fi
+
+      - name: Guardar estado
+        run: |
+          git config user.name "alertas-bot"
+          git config user.email "alertas-bot@users.noreply.github.com"
+          git add estado_alertas.json 2>/dev/null || exit 0
+          git diff --cached --quiet && exit 0
+          git commit -m "estado" -q
+          for i in 1 2 3; do git pull --rebase -q && git push -q && break; sleep 3; done
