@@ -1,6 +1,5 @@
 {
 "vistos": {
-"https://www.ex-ante.cl/?p=390861": 1795555495.578011,
 "https://www.theclinic.cl/?p=1826164": 1795556289.549043,
 "https://www.diarioconstitucional.cl/legislativo/proyecto-de-ley-busca-facilitar-regularizacion-de-pequenos-negocios-y-sedes-comunitarias-mediante": 1795556823.163297,
 "https://www.latercera.com/politica/noticia/bancada-de-diputados-ps-responde-a-arenas-hacemos-un-llamado-al-vocero-para-que-recapacite-respecto-a-su-rol/": 1795557091.67461,
@@ -960,13 +959,10 @@
 "CBMi1gFBVV95cUxQNm55VUZ3dkl2RlBya0hVajVNelRQR29rV0dqX3Y5UndrbnhSaVhveGcxU2RLR3NvbHBXZ1o0OEYtV1R2MGRSa1FuMDZnNHhPcEp0MUN5NGlvOVQ2OXdWQUFrbF92bDZSNklEVkR6WElrblVzSDFjUmthMC0zaDRLbUlOUnFCMTR0ZDd3UHBaTS1LZzNSNmtPVFBqeWVVaGRERVpxT3M3VDBpcVZKckp6cTNOMFFycnlHRkRUYi1YTnJCYWNVQko1NzZLcktjUW5EbkFjZ2RR0gH3AUFVX3lxTE1sWGlOMU1KUVRiZl9BNWF5QUNRamNXRFJuQUJHTGtqU01nb09LUVZmR3JvY0JScmc5NGZ0TV9MZmFSTWhIR3lBdk95M3JZcjRxZHEtY3pQZDRTNWlqSFk4Tm5tNC1XeFQ0SW9QV3U5SEpkYzVDdndtTDRCVEZPd2tXYnpnZUdGZ2pSdTFfYm1sLVotX2dNQ2pzZjlWV0Z1WTVKNldSbHZxUUxKZzNuaU1GSkpNajlCcndmRV93Y2dZcnRJNjUxLVB1NTB2ZnZKYlJMaEV4dFN6SVZWUERtdElCa2Z5czZyV25lcVYxbDVsNWwxSEJGY2s": 1795813160.757973,
 "https://www.ex-ante.cl/?p=391363": 1795813160.757973,
 "CBMiugFBVV95cUxOaUR5RE5Vc21aTVNVLTdXQ3VLWVdFOHFpUldheThKcU9lSjlqSzRnT29faDk2SE5PWlhxakRpTXlUbExFeEoxeDBwUE9Lb0s1bW5oQkpvX2NXd3U2WXBnQXdsNGIxaUJUY21ZckUzcVBpSzR3dWplYWJUTElyX2JkVDZheEh5SWUzUW5ab296OGI4dHVkUFBoaFd0ZjhPWXhqUUJpdjJMTTBuWXM0Nm1KNi1NSEpiYzFOSkE": 1795813813.247519,
-"CBMivwFBVV95cUxQdE5OaW5uU0FWenZ5ZTBFY1BvVVo2NXZTOGZyYkVvSTlhWkxBUjRnQ1cxakxUWjlqNnRoY09fMDVUY1V4Z3llY2ZJcnRReHpzeGdRVU1sZ2VMaWVIN1FBWE43bGp0Ri1jbkZRMXkyRlVBS2IwMmU1bmF3U1NnV2NGRGZGckxsMl8zMHJXNWdhTVl5Z3VZR2ZvVXNIUzNCMi1jN1RXVE1MQXNxVUc5ak1rb2wxajlkc0ZyT0ZNT3NHTQ": 1795814247.86921
+"CBMivwFBVV95cUxQdE5OaW5uU0FWenZ5ZTBFY1BvVVo2NXZTOGZyYkVvSTlhWkxBUjRnQ1cxakxUWjlqNnRoY09fMDVUY1V4Z3llY2ZJcnRReHpzeGdRVU1sZ2VMaWVIN1FBWE43bGp0Ri1jbkZRMXkyRlVBS2IwMmU1bmF3U1NnV2NGRGZGckxsMl8zMHJXNWdhTVl5Z3VZR2ZvVXNIUzNCMi1jN1RXVE1MQXNxVUc5ak1rb2wxajlkc0ZyT0ZNT3NHTQ": 1795814247.86921,
+"CBMi3gFBVV95cUxPQlBYQW05UEg5VGNqSGljTnJ1S0RJV3dnbmRBQUc2amFKV3BnaklxVHlzRzZ4LTUxZjgxTUo3eE1jQXpfdlFVZ1djSnE1SDZMbFcwZmswS3NTMFJTdzVQRjdGS3FtZXZ5ZmZtTFFYNmVuTUE1aWJHMDdxbVlQcWhPQ3BJTC00VEtGdHFEZEd6bkxSckVUVm1KaXJ6VHhuTkNQdTZBeXlocl8wSjhJLV9iTzVJMWJzZ3Rqb2ViVG5nZ1k5aGlrazhSei1OVWRyMDN1SXU2eDVFUHBSMWtoVFE": 1795814683.9633
 },
 "titulos": [
-[
-"antes derecha eleccion empatan encuesta espana mayoria psoe ultima vox",
-1795555495.578011
-],
 [
 "aprobado avanza camara congreso diputados electronica firma proyecto unanimidad",
 1795556289.549043
@@ -3786,6 +3782,10 @@
 [
 "acuerdo alza gobierno gremios logra nominal pacta publico reajuste salarial sector",
 1795814247.86921
+],
+[
+"alta alza cesantia defiende desempleo gobierno historica kast llevamos meses",
+1795814683.9633
 ]
 ]
 }
