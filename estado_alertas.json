@@ -1,6 +1,5 @@
 {
 "vistos": {
-"CBMiiwJBVV95cUxPY2luQ1pqLW01YkxZR21XX0t6a0hrZ0hlVTQ4MjZ4WjR5VDc4c1ZvSkdEQjNSQWpvTHA3Sm9VX0xBMjdEOTlZZXRzY3NBYkt2bE95eUsweGprSFU3bjRaVEd0UElIRmxKcS1aNGhwNGh4cnM3b3hiaDI2VURENmpMYWgzOE1FV0x0TlZCMFozVDA3enE1NWhaOGwtaXE1cG5lbUM0dkxhOVYtQUR1bURFS2V3ekd4WGJPMkctWnFfUHdzMnUtYWxJYTdBQ2NybDRQazZHa0NQY1Q1dzBodEFQWDNFQVZ5ZTZWc05UUWdUclRlUzNQSmp2NTVuM3MyLVdYMW8wNWdPc1d6V28": 1795597448.747617,
 "https://www.latercera.com/politica/noticia/por-que-la-oposicion-no-logra-capitalizar-los-tropiezos-de-kast/": 1795597666.234768,
 "CBMiwAFBVV95cUxQOVRzSTVPcEZlR3pyWlBJQkpYc3NOVnQ3SHB4eVh2OUVyMnNOUG9teF83Vy05Xy1COGhGMF9hZWVSOFdWcDQ5c0FyUDl2eUdURXhXYlMzUTVEX0E3MWg3OXRkZkFSWlYwUTQtQXJLTGY1cUdiczJ3YUpneVNKNW51OVpMcEM1T3Z2MURVaHRWVnZnU0dBNFA2NjZIVEJ0VDZSV1pDcFVQUFNtcU8wd0dwVkVVUVVRWC1fUG9wcEt0bzA": 1795597881.889172,
 "https://www.diarioconstitucional.cl/contraloria/contraloria-limita-fraccionamiento-de-vacaciones-de-medicos-que-concentran-su-jornada-en-turnos-de": 1795598530.438476,
@@ -976,13 +975,11 @@
 "https://www.latercera.com/nacional/noticia/la-decision-de-may-chomali/": 1795856564.189166,
 "https://www.latercera.com/nacional/noticia/municipios-la-otra-discusion-presupuestaria/": 1795856564.189166,
 "https://www.latercera.com/nacional/noticia/francisca-toledo-ministra-del-medio-ambiente-queremos-mapear-los-lugares-donde-tener-infraestructura-publica-para-responder-en-adaptacion/": 1795856564.189166,
-"https://www.latercera.com/nacional/noticia/descifra-56-piensa-que-las-acciones-individuales-contribuyen-poco-a-la-crisis-climatica/": 1795856564.189166
+"https://www.latercera.com/nacional/noticia/descifra-56-piensa-que-las-acciones-individuales-contribuyen-poco-a-la-crisis-climatica/": 1795856564.189166,
+"https://www.latercera.com/politica/noticia/fiscalia-investiga-presunta-falsificacion-de-certificado-medico-de-zandra-parisi/": 1795856787.662145,
+"https://www.latercera.com/politica/noticia/yasna-provoste-nuestro-pais-necesita-acuerdos-mas-grandes-no-tinterilladas-ni-triunfos-precarios-de-uno-o-dos-votos/": 1795856787.662145
 },
 "titulos": [
-[
-"acuerdo afectados asignaciones caso castro destrabar disculpas expresidentes firmas pide quiroz senadores vodanovic",
-1795597448.747617
-],
 [
 "acusacion ausentarse comision contra lunes rabat revisora votara vuelve",
 1795597881.889172
@@ -3818,6 +3815,14 @@
 [
 "acciones climatica contribuyen crisis descifra individuales piensa poco",
 1795856564.189166
+],
+[
+"certificado falsificacion fiscalia investiga medico parisi presunta zandra",
+1795856787.662145
+],
+[
+"acuerdos dos grandes necesita nuestro pais precarios provoste tinterilladas triunfos uno votos yasna",
+1795856787.662145
 ]
 ]
 }
